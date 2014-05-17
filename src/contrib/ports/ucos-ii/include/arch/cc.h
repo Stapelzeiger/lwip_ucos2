@@ -50,7 +50,8 @@ typedef intptr_t mem_ptr_t;
 #include <stdlib.h>
 
 /* XXX Do something useful .*/
-#define panic(s) {printf("%s:%d : %s", __FILE__, __LINE__, (s));while(1);}
+void panic(const char*);
+//#define panic(s) {printf("%s:%d : %s", __FILE__, __LINE__, (s));while(1);}
 
 /* Non-fatal, prints a message. Uses printf formatting. */
 #define LWIP_PLATFORM_DIAG(x)   {printf x;}
